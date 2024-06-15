@@ -1,0 +1,64 @@
+@import "./layout.css";
+
+.count-selector {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1.5em;
+}
+.count-selector > div {
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+.count-selector > a {
+  margin-right: 0.5em;
+}
+.count-selector > a.selected {
+  color: #333;
+  border-bottom-color: #fff;
+  cursor: default;
+  pointer-events: none;
+}
+.count-selector .danger {
+  align-self: flex-end;
+  margin: 0 0.2em 0 0.5em;
+  line-height: 1.5;
+  color: darkred;
+  font-size: 1.2em;
+}
+
+.meter > * {
+  box-sizing: content-box;
+}
+
+/*
+TODO: fix Konva to not overwrite canvas styles
+*/
+svg,
+canvas,
+.canvas {
+  border: 1px solid #999 !important;
+}
+
+/* dom canvas */
+.canvas {
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+}
+
+div.rectangle {
+  display: inline-block;
+  position: absolute;
+  background: white;
+  border: solid 1px;
+}
+
+/*
+Fix for the border of Next2d canvas
+*/
+#__next2d__ {
+  border: 1px solid #999 !important;
+}
+#__next2d__ canvas {
+  border: none !important;
+}
